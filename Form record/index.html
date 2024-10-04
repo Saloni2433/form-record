@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Simple Form</h1>
+
+  <div class="form-container">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" />
+    </div>
+
+    <div class="form-group">
+      <label for="details">Details:</label>
+      <input type="text" id="details" />
+    </div>
+
+    <button id="add-button" onclick="addRecord()">Add Record</button>
+    <button id="update-button" onclick="updateRecord()" style="display: none;">Update Record</button>
+  </div>
+
+  <input type="text" id="search" placeholder="Search by name" oninput="searchByName()" />
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Details</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="recordList"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
